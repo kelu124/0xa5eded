@@ -4740,6 +4740,10 @@
 		(uuid "aa931472-8ea4-4da4-9ee5-eb4ebd151c14")
 	)
 	(no_connect
+		(at 137.16 217.17)
+		(uuid "b7f14c74-1b04-4767-925a-90efae091577")
+	)
+	(no_connect
 		(at 326.39 115.57)
 		(uuid "d1e0162f-e6db-4a85-ab71-9e8d4ea4900a")
 	)
@@ -4750,10 +4754,6 @@
 	(no_connect
 		(at 137.16 262.89)
 		(uuid "faabe20b-fadc-4428-a954-ecf6931ad8b1")
-	)
-	(no_connect
-		(at 138.43 162.56)
-		(uuid "faabeeff-13b0-4706-8b54-e4b14c82d004")
 	)
 	(wire
 		(pts
@@ -5144,16 +5144,6 @@
 			(type default)
 		)
 		(uuid "2fa096c1-0349-4ec1-ab1d-5f24e6eb3cf8")
-	)
-	(wire
-		(pts
-			(xy 137.16 217.17) (xy 127 217.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2fef667b-b293-41e3-8384-4b01002318ac")
 	)
 	(wire
 		(pts
@@ -6024,16 +6014,6 @@
 			(type default)
 		)
 		(uuid "936523fd-538c-4c94-9339-ffd5450757bb")
-	)
-	(wire
-		(pts
-			(xy 127 217.17) (xy 127 212.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "93728fc4-6883-45af-9f15-9fae13897b1f")
 	)
 	(wire
 		(pts
@@ -15451,72 +15431,6 @@
 			(project "ADC_pHAT"
 				(path "/63ad4f82-bcf5-4864-bf57-1a5e3f62d088"
 					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 127 212.09 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1dd3d8ba-9ab9-4db7-b7ca-1556ce4a4de3")
-		(property "Reference" "#PWR012"
-			(at 127 215.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 127 207.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 127 212.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 212.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 127 212.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "217f5fc7-e780-459a-bfb3-401ce0c7a298")
-		)
-		(instances
-			(project "ADC_pHAT"
-				(path "/63ad4f82-bcf5-4864-bf57-1a5e3f62d088"
-					(reference "#PWR012")
 					(unit 1)
 				)
 			)
