@@ -1,0 +1,50 @@
+.program adc
+
+in pins, 8
+push block
+
+
+% c-sdk {
+    static inline void adc_program_init(PIO pio, uint sm, uint offset, uint pin, float freq) 
+    {
+        pio_sm_config c = adc_program_get_default_config(offset);
+        pio_gpio_init(pio, pin);
+        pio_gpio_init(pio, pin + 1);
+        pio_gpio_init(pio, pin + 2);
+        pio_gpio_init(pio, pin + 3);
+        pio_gpio_init(pio, pin + 4);
+        pio_gpio_init(pio, pin + 5);
+        pio_gpio_init(pio, pin + 6);
+        pio_gpio_init(pio, pin + 7);
+        sm_config_set_in_pins(&c, pin);
+        sm_config_set_in_shift(&c, false, false, 8);
+        sm_config_set_fifo_join(&c, PIO_FIFO_JOIN_RX);
+        float div = (clock_get_hz(clk_sys) / freq);
+        sm_config_set_clkdiv(&c, div);
+        pio_sm_init(pio, sm, offset, &c);
+        pio_sm_set_enabled(pio, sm, true);
+    }
+%}
+
+.program adc_clk
+.side_set 1
+
+nop side 1
+nop side 0
+
+
+% c-sdk {
+    static inline void adc_clk_program_init(PIO pio, uint sm, uint offset, uint pin, float freq) 
+    {
+        pio_sm_config c = adc_clk_program_get_default_config(offset);
+        pio_gpio_init(pio, pin);
+        sm_config_set_out_pins(&c, pin, 1);
+        pio_sm_set_consecutive_pindirs(pio, sm, pin, 1, true);
+        sm_config_set_sideset_pins(&c, pin);
+        gpio_put(pin, false);
+        float div = (clock_get_hz(clk_sys) / freq);
+        sm_config_set_clkdiv(&c, div);
+        pio_sm_init(pio, sm, offset, &c);
+        pio_sm_set_enabled(pio, sm, true);
+    }
+%}
