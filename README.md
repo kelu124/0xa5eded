@@ -17,7 +17,7 @@ aka 0xA5EDED == sha1(pHATrick)
 
 # Description
 
-An 8-bit, 100Msps ADC standalone pHAT
+An 8-bit, 125Msps ADC standalone pHAT
 
 More? @TODO
 
@@ -27,6 +27,26 @@ More? @TODO
 
 ![](bot.png)
 
+
+# Acquisition of a square/sine wave
+
+Signal coming out of a cheap DSO, should be around square, 4MHz
+
+### Acquisition 
+
+![](doc/images/125mhz_signal.png)
+
+### Spectrum of a square wave at 125Msps
+
+![](doc/images/125mhz.png)
+
+# Changes from v1
+
+* Remove i2c to something simpler - MCP40D17T
+* Let user choose offset or not
+* Check OPAMP capa to get a 60MHz cutoff
+* BAV / MD0100 to be removed
+* Putting the rp2040 under the board, to expose the beautiful art to users
 
 # License
 
