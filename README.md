@@ -23,6 +23,8 @@ More? @TODO
 
 # What
 
+__Beware - these need to be updated with actual assembled board. v2 includes sees top going bottom and vice versa.__
+
 ![](top.png)
 
 ![](bot.png)
