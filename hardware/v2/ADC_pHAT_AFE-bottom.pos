@@ -1,0 +1,8 @@
+### Footprint positions - created on 2024-10-10T17:35:50+0200 ###
+### Printed by KiCad version 8.0.3-8.0.3-0~ubuntu22.04.1
+## Unit = mm, Angle = deg.
+## Side : bottom
+# Ref     Val                  Package                               PosX       PosY       Rot  Side
+J2        Conn_02x20_Odd_Even  PinSocket_2x20_P2.54mm_Vertical     8.4000    25.4600  -90.0000  bottom
+U1        Pico                 RPi_Pico_SMD                       32.5000    12.0000   90.0000  bottom
+## End
